@@ -11,3 +11,5 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
     </div>
   );
 };
+
+export default FriendListItem;

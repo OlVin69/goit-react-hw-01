@@ -1,6 +1,7 @@
+import { HiOutlineAtSymbol } from 'react-icons/hi2';
 import css from './Profile.module.css';
 
-export const Profile = ({
+const Profile = ({
   name,
   tag,
   location,
@@ -15,7 +16,10 @@ export const Profile = ({
           alt="User avatar"
         />
         <p className={css.fullName}>{name}</p>
-        <p className={css.addInfo}>{tag}</p>
+        <p className={css.addInfo}>
+          <HiOutlineAtSymbol />
+          {tag}
+        </p>
         <p className={css.addInfo}>{location}</p>
       </div>
 
@@ -36,3 +40,5 @@ export const Profile = ({
     </div>
   );
 };
+
+export default Profile;
