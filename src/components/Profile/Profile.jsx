@@ -1,0 +1,38 @@
+import css from './Profile.module.css';
+
+export const Profile = ({
+  name,
+  tag,
+  location,
+  stats: { followers, views, likes },
+}) => {
+  return (
+    <div className={css.container}>
+      <div className={css.info}>
+        <img
+          className={css.picture}
+          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
+          alt="User avatar"
+        />
+        <p className={css.fullName}>{name}</p>
+        <p className={css.addInfo}>{tag}</p>
+        <p className={css.addInfo}>{location}</p>
+      </div>
+
+      <ul className={css.list}>
+        <li className={css.item}>
+          <span className={css.statsTitle}>Followers</span>
+          <span className={css.statsValue}>{followers}</span>
+        </li>
+        <li className={css.item}>
+          <span className={css.statsTitle}>Views</span>
+          <span className={css.statsValue}>{views}</span>
+        </li>
+        <li className={css.item}>
+          <span className={css.statsTitle}>Likes</span>
+          <span className={css.statsValue}>{likes}</span>
+        </li>
+      </ul>
+    </div>
+  );
+};
