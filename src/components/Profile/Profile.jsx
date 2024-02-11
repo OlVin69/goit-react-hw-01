@@ -5,16 +5,13 @@ const Profile = ({
   name,
   tag,
   location,
+  image,
   stats: { followers, views, likes },
 }) => {
   return (
     <div className={css.container}>
       <div className={css.info}>
-        <img
-          className={css.picture}
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          alt="User avatar"
-        />
+        <img className={css.picture} src={image} alt="User avatar" />
         <p className={css.fullName}>{name}</p>
         <p className={css.addInfo}>
           <HiOutlineAtSymbol />
